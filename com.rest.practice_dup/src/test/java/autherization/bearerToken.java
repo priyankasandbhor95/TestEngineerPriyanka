@@ -1,0 +1,27 @@
+package autherization;
+
+import static io.restassured.RestAssured.given;
+
+import org.testng.annotations.Test;
+
+public class bearerToken {
+	@Test
+	public void sampleTest()
+	{
+		
+		//ninza pay application login
+		//49.249.29.5:8091/swager-ui.html
+		given()
+		.auth().oauth2("eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJsZUN3YUNPai00RXVlbzJkTFFrTmZuLXh2M0F3Nm5ZdWZtS0pINXBFWkNNIn0.eyJleHAiOjE3MzY3NTg2ODEsImlhdCI6MTczNjc1Njk2OSwianRpIjoiMTY4NDM2NWUtNDVhNS00NDc2LWI4NTktNTAyNWFlMzE0YjIwIiwiaXNzIjoiaHR0cDovLzQ5LjI0OS4yOC4yMTg6ODE4MC9hdXRoL3JlYWxtcy9uaW56YSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI0ODVlYTJhYi1kY2MzLTQwOGItOTUxZi04NGMwM2JmZDAwMmYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJuaW56YS1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiNmIwMDg3NTktNmY2OS00NGVhLTk3NWMtMDk2ODdiMTg1ZGE3IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vNDkuMjQ5LjI4LjIxODo4MDkxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW5pbnphIiwib2ZmbGluZV9hY2Nlc3MiLCJhZG1pbiIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNmIwMDg3NTktNmY2OS00NGVhLTk3NWMtMDk2ODdiMTg1ZGE3IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJybWd5YW50cmEifQ.AOsajjcsvChqiGluZ15Jk2pcW80CaZVzRk-RwW4YJUw0vAmJHDywOqbn6FnEeCoF4pQIodi0pcB6g2r47-rujILSC9pRFb__51w2bRrKpK9v_Hzh1bJ24pRQNdcCoE7dokGBl5sfBm_YmF2Nf3a11m0utZzSaaCqcONdL12zqwJF0tHMKLTUK53t9Zf6t3lZFekko8TXrmY-Fggz9vphpGhSB-nnNlWVtY08pLtq0b0Uh9a8acGeZX0kUUMGJhgmPZJEpc6Uht3dTYynpsOHsH30J81x8eM2N4NLtbKsX1t5QTdC05KD4Ez-52qnR-mVhK5qcFaUD3zW0ktlq0gZLg")
+		.log().all()
+		
+		.when()
+		.get("http://49.249.28.218:8091/projects")
+		
+		.then()
+	.log().all();
+	
+	
+	}
+
+}
